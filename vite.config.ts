@@ -11,7 +11,7 @@ export default defineConfig({
     vue(),
     AutoImport({
       resolvers: [
-        ElementPlusResolver(), 
+        ElementPlusResolver(),
       ],
       imports: ['vue'],
     }),
@@ -20,7 +20,9 @@ export default defineConfig({
         ElementPlusResolver(),
       ],
     }),
-  ],
+   ],
+   base:'./'
+
   // server: {
   //   proxy: {
   //     '/': {
