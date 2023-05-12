@@ -37,7 +37,7 @@ const addRole = () => {
 		confirmButtonText: '确定',
 		cancelButtonText: '取消',
 	})
-		.then(({ value }) => {
+		.then(( value:string ) => {
 			if (value) {
 				data.roleList.push({ roleId: data.roleList.length + 1, roleName: value, authority: [] })
 			}

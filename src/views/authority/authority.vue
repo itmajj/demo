@@ -23,7 +23,6 @@ const params: any = route.params
 const data = reactive(new initData(params.id, params.authority))
 onMounted(() => {
 	getAuthorityList().then((res) => {
-		console.log(res.data)
 		data.list = res.data
 	})
 })

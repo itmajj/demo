@@ -40,7 +40,7 @@ const getGoods=()=>{
   data.list = res.data
   data.selectData.count = res.data.length //总条数=请求回来数组的长度
 }).catch(err => {
-  console.log(err);
+  return err
 })
 }
 //数据切割

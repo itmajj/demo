@@ -19,12 +19,12 @@ server.interceptors.request.use(config => {
     })
 //响应拦截
 server.interceptors.response.use((res) => {
-    const code: number = res.data.code
-    if (code != 200) {
-        return Promise.reject(res.data)
+    const status: number = res.status
+    if (status == 200) {
+        return res.data  
     }
-    return res.data
-}, (err) => {
-    console.log(err)
+    return Promise.reject(res.data)
+}, err => {
+    Promise.reject(err);
 })
 export default server   

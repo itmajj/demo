@@ -18,7 +18,8 @@ import { reactive, ref, toRefs } from "vue"
 import { adminLogin } from '../../request/api'
 import { useRouter } from "vue-router"
 import { loginData } from '../../type/type'
-import type { FormInstance, FormRules } from 'element-plus'
+import type { FormInstance } from 'element-plus'
+
 import { ElNotification } from 'element-plus'
 const validatePass = (rule: unknown, value: string | undefined, cb: (value?: string) => void) => {
   if (!value) {
@@ -33,23 +34,22 @@ let ruleFormRef = ref()
 const router = useRouter()
 const submitForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return
-  formEl.validate((valid) => {
-    if (valid) {
+  formEl.validate((value: any) => {
+    if (value) {
       adminLogin(data.ruleForm).then((res) => {
         localStorage.setItem('token', res.data.token)
         router.push('/')
-      }).catch(
-        (res) => {
-          localStorage.setItem('token', res.data.token)
-          router.push('/')
-          ElNotification({
+        ElNotification({
             title: '登录成功',
             message: '欢迎您！',
             type: 'success',
           })
+      }).catch(
+        (err) => {
+          return err
         })
     } else {
-      console.log('error submit!')
+     
       return false
     }
   })

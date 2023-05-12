@@ -2,17 +2,13 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 const routes: RouteRecordRaw[] = [{
     path: '/login',
     name: 'login',
-    component: () => import('../views/login/login.vue'),
+    component: () => import('/src/views/login/login.vue'),
 },
 {
     path: '/',
     name: 'index',
     component: () => import('../views/index/index.vue'),
-    meta: {
-        isShow: false,
-        title: '首页'
-    },
-    redirect: 'goods',
+    redirect:'vshow',
     children: [{
         path: 'goods',
         name: 'goods',

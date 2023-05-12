@@ -27,8 +27,8 @@ const saleCountDate = reactive(new initData)
 getSaleDate().then(
 	(res) => {
 		saleCountDate.list = res.data.list
-	}).catch(
-		err=>console.log(err)
+	}).catch(err=>{
+		return err}
 	)
 const colors = [
 	{ color: '#f56c6c', percentage: 20 },

@@ -8,7 +8,8 @@ export function adminLogin (data:adminLoginData){
     return server({
         url:'/login',
         method:'post',
-        data
+        data  
+        
     })
 }
 export function getGoodsList () {

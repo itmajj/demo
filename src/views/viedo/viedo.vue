@@ -26,8 +26,8 @@ onMounted(() => {
 			]
 		})
 	}).catch(
-		err => console.log(err)
-	)
+		err => {return err
+			}	)
 	let option: EChartsOption = {
 		title: {
 			text: '商品销量',
