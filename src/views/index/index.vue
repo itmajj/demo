@@ -3,13 +3,10 @@
     <el-container>
       <el-header class="header">
         <el-row :gutter="20" class="amineLrow">
-          <el-col :span="4" class="login">
-            <img src="../../assets/vue.svg" alt="">
+          <el-col :span="3" class="adminSpan">
+            <span>CES系统</span>
           </el-col>
-          <el-col :span="16" class="adminSpan">
-            <h2>用户管理系统</h2>
-          </el-col>
-          <el-col :span="4" class="siginout">
+          <el-col :span="3" class="siginout">
             <el-button type="primary" @click="outLogin()">退出</el-button>
           </el-col>
         </el-row>
@@ -76,7 +73,7 @@ const outLogin = () => {
   margin-left: -8px;
   margin-right: -6px;
   height: 40px;
-  background-color: #545c80;
+  background-color: #545c64;
 }
 
 .login {
@@ -84,13 +81,15 @@ const outLogin = () => {
   text-align: center;
   line-height: 40px;
 }
-
-.h2,
 .adminSpan {
   height: 40px;
   text-align: center;
   line-height: 40px;
-  color: #fff;
+  color: #79bbff;
+}
+.amineLrow{
+  display: flex;
+  justify-content: space-between;
 }
 
 .siginout {
