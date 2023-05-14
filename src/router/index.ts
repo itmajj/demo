@@ -80,6 +80,15 @@ const routes: RouteRecordRaw[] = [{
             title: 'CSS展示'
         },
         component: () => import('../views/vshow/vshow.vue'),
+    },
+    {
+        path: 'lording',
+        name: 'lording',
+        meta: {
+            isShow: true,
+            title: '文件操作'
+        },
+        component: () => import('../views/lording/lording.vue'),
     }
     ]
 }
