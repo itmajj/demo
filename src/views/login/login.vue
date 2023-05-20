@@ -19,7 +19,7 @@ import { adminLogin } from '../../request/api'
 import { useRouter } from "vue-router"
 import { loginData } from '../../type/type'
 import type { FormInstance } from 'element-plus'
-
+import { getTime } from './timie'
 import { ElNotification } from 'element-plus'
 const validatePass = (rule: unknown, value: string | undefined, cb: (value?: string) => void) => {
   if (!value) {
@@ -32,6 +32,7 @@ const data = reactive(new loginData())
 const { ruleForm } = toRefs(data)
 let ruleFormRef = ref()
 const router = useRouter()
+let msg = getTime()
 const submitForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return
   formEl.validate((value: any) => {
@@ -40,16 +41,16 @@ const submitForm = (formEl: FormInstance | undefined) => {
         localStorage.setItem('token', res.data.token)
         router.push('/')
         ElNotification({
-            title: '登录成功',
-            message: '欢迎您！',
-            type: 'success',
-          })
+          title: '登录成功',
+          message: `${msg}`,
+          type: 'success',
+        })
       }).catch(
         (err) => {
           return err
         })
     } else {
-     
+
       return false
     }
   })
