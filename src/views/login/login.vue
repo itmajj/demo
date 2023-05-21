@@ -72,6 +72,7 @@ const rules = {
   height: 100%;
   background: url(/login_bg.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .demo-ruleForm {
     position: relative;
