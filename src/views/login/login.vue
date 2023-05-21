@@ -8,7 +8,7 @@
         <el-input v-model="ruleForm.password" type="password" autocomplete="off" />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="submitForm(ruleFormRef)">登录</el-button>
+        <el-button  class="btn" type="primary" @click="submitForm(ruleFormRef)">登录</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -67,16 +67,20 @@ const rules = {
 </script>
 <style lang="less" scoped>
 .demo-login {
-  width: 100vw;
-  height: 100vh;
-  background-color: #36f158;
-  padding: 1px;
-
-  .demo-ruleForm {
-    margin: 0 auto;
-    padding-top: 25%;
-    width: 500px;
-
-  }
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background: url(/login_bg.jpg);
+  background-size: cover;
 }
+.demo-ruleForm {
+    position: relative;
+    float: right;
+    margin-right: 59px;
+    margin-top: 200px;
+    width: 300px;
+    .btn{
+      width: 300px;
+    }
+  }
 </style>
