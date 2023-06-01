@@ -21,7 +21,7 @@ export default defineConfig({
       ],
     }),
    ],
-   base:'itmajj'
+   base:'/'
 
   // server: {
   //   proxy: {
