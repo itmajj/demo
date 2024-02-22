@@ -21,7 +21,7 @@ import { loginData } from '../../type/type'
 import type { FormInstance } from 'element-plus'
 import { getTime } from './timie'
 import { ElNotification } from 'element-plus'
-const validatePass = (rule: unknown, value: string | undefined, cb: (value?: string) => void) => {
+const validatePass = (rules: unknown, value: string | undefined, cb: (value?: string) => void) => {
   if (!value) {
     cb("请输入密码")
   } else {
