@@ -1,6 +1,6 @@
 import axios from 'axios'
 const server = axios.create({
-    baseURL: 'https://www.fastmock.site/mock/bf1fcb3c2e2945669c2c8d0ecb8009b8/api',
+    baseURL: 'http://127.0.0.1:4523/m1/5922937-5610011-default',
     timeout: 5000,
     headers: {
         

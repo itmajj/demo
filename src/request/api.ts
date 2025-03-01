@@ -38,13 +38,13 @@ export function getAuthorityList () {
 }
 export function getSaleDate () {
     return server({
-        url:'https://www.fastmock.site/mock/a18fa8bb4bb6693d20a8776087f53506/api/saleDate',
+        url:'/saleData',
         method:'get',
     })
 }
 export function getviedoData () {
     return server({
-        url:'https://www.fastmock.site/mock/a18fa8bb4bb6693d20a8776087f53506/api/viedoData',
+        url:'/viedoData',
         method:'get',
     })
 }
